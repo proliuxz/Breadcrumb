@@ -8,24 +8,35 @@ import { CComponent } from './pages/c/c.component';
 const appRoutes: Routes = [
   {
     path: 'a',
-    component: AComponent,
     data: {
       breadcrumb: 'A'
     },
     children: [
       {
+        path: '',
+        component: AComponent,
+      },
+      {
         path: 'b',
-        component: BComponent,
         data: {
           breadcrumb: 'B'
         },
         children: [
           {
+            path: '',
+            component: BComponent,
+          },
+          {
             path: 'c',
-            component: CComponent,
             data: {
               breadcrumb: 'C'
             },
+            children: [
+              {
+                path: '',
+                component: CComponent,
+              }
+            ]
           }
         ]
       }
