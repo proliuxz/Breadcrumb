@@ -10,6 +10,8 @@ import { BComponent } from './pages/b/b.component';
 import { CComponent } from './pages/c/c.component';
 import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { AppRoutingModule } from './app.routing';
+import { BreadcrumbService } from './services/breadcrumb.service';
+import { NameService } from './services/name.service';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { AppRoutingModule } from './app.routing';
     HttpModule,
     AppRoutingModule
   ],
+  providers: [BreadcrumbService, NameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
